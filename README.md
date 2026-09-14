@@ -15,7 +15,7 @@
 - `cv.html` — 旧 CV 页面地址的兼容跳转
 - `style.css` — 全站共用样式
 
-`publications.html` 是旧地址的兼容跳转页，会自动转到 `research.html`。网站内容已根据 `CV_English.pdf` 填写；Students 与学术活动中仍缺少、且无法从 CV 确认的内容会等待补充。
+`publications.html` 是旧地址的兼容跳转页，会自动转到 `research.html`。网站内容已根据 `CV_English.pdf` 填写；学术活动中仍缺少、且无法从 CV 确认的内容会等待补充。
 
 ## 发布到 GitHub Pages
 
