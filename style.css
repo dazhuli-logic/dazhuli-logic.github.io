@@ -194,8 +194,8 @@ p { margin: 0 0 1rem; }
 
 .home-overview-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, .7fr) minmax(0, 1.15fr);
-  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.75rem;
 }
 
 .home-overview-column h2 {
@@ -208,16 +208,39 @@ p { margin: 0 0 1rem; }
 .history-list { margin: 0; padding: 0; list-style: none; }
 
 .history-item {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  column-gap: 1.5rem;
   padding: .95rem 0 1rem;
   border-bottom: 1px solid var(--line);
 }
 
 .history-item:first-child { padding-top: 0; }
-.history-dates { display: block; margin-bottom: .2rem; color: var(--blue-dark); font-size: .76rem; font-weight: 700; letter-spacing: .025em; }
-.history-item h3 { margin: 0 0 .2rem; font-size: 1rem; }
-.history-item p { margin: 0; color: var(--muted); font-size: .87rem; line-height: 1.52; }
-.positions-column .history-item p { font-size: .78rem; white-space: nowrap; }
+.history-dates { grid-column: 1; grid-row: 1 / span 3; display: block; color: var(--blue-dark); font-size: .76rem; font-weight: 700; letter-spacing: .025em; }
+.history-item h3 { grid-column: 2; margin: 0 0 .2rem; font-size: 1rem; }
+.history-item p { grid-column: 2; margin: 0; color: var(--muted); font-size: .87rem; line-height: 1.52; }
+.history-item .education-details { margin-top: .45rem; }
 .home-news-item p { color: var(--ink); }
+.position-groups { margin: 0; padding-left: 1.35rem; list-style: disc; }
+.position-group { padding: .95rem 0 1rem; border-bottom: 1px solid var(--line); }
+.position-group:first-child { padding-top: 0; }
+.position-group::marker { color: var(--blue-dark); font-size: .8rem; }
+.position-group h3 { margin: 0 0 .55rem; font-size: 1rem; line-height: 1.5; }
+.position-roles { margin: 0; padding: 0 0 0 .8rem; list-style: none; }
+.position-roles li { display: grid; grid-template-columns: 13rem minmax(0, 1fr); column-gap: 1.5rem; margin-top: .3rem; font-size: .87rem; line-height: 1.52; }
+.position-dates { color: var(--blue-dark); font-size: .76rem; font-weight: 700; letter-spacing: .025em; }
+.position-title { font-weight: 600; }
+.education-list { margin: 0; padding-left: 1.35rem; list-style: disc; }
+.education-item { padding: .95rem 0 1rem; border-bottom: 1px solid var(--line); }
+.education-item:first-child { padding-top: 0; }
+.education-item::marker { color: var(--blue-dark); font-size: .8rem; }
+.education-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1.25rem; }
+.education-heading h3 { margin: 0; font-size: 1rem; }
+.joint-degree-label { color: var(--blue-dark); font-size: .82rem; font-weight: 600; white-space: nowrap; }
+.education-dates { flex: none; color: var(--blue-dark); font-size: .76rem; font-weight: 700; letter-spacing: .025em; }
+.education-institution { margin: .35rem 0 0; color: var(--muted); font-size: .87rem; line-height: 1.52; }
+.education-details { margin: .55rem 0 0; padding-left: 1.35rem; list-style: circle; color: var(--muted); font-size: .84rem; line-height: 1.52; }
+.education-details li + li { margin-top: .25rem; }
 .more-link { display: inline-block; margin-top: .9rem; font-size: .86rem; font-weight: 700; text-decoration: none; }
 .more-link:hover { text-decoration: underline; }
 
@@ -316,9 +339,14 @@ p { margin: 0 0 1rem; }
   .profile-grid { grid-template-columns: 1fr; gap: 2rem; }
   .profile-aside { display: grid; grid-template-columns: 7.25rem minmax(0, 1fr); gap: 1.25rem; align-items: start; }
   .portrait-placeholder, .portrait-frame { margin: 0; }
-  .interest-grid, .compact-grid, .home-overview-grid { grid-template-columns: 1fr; }
+  .interest-grid, .compact-grid { grid-template-columns: 1fr; }
   .home-overview-grid { gap: 2.25rem; }
-  .positions-column .history-item p { white-space: normal; }
+  .history-item { grid-template-columns: 1fr; }
+  .history-dates { grid-column: 1; grid-row: auto; margin-bottom: .2rem; }
+  .history-item h3, .history-item p { grid-column: 1; }
+  .position-roles li { grid-template-columns: 1fr; }
+  .education-heading { display: block; }
+  .education-dates { display: block; margin-top: .2rem; }
 }
 
 @media (max-width: 520px) {
