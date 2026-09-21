@@ -187,8 +187,8 @@ p { margin: 0 0 1rem; }
 .profile-copy .lead { font-family: var(--serif); font-size: 1.08rem; line-height: 1.72; }
 
 .home-overview {
-  margin-top: 3rem;
-  padding-top: 2rem;
+  margin-top: 2rem;
+  padding-top: 1.4rem;
   border-top: 1px solid var(--line);
 }
 
@@ -220,7 +220,9 @@ p { margin: 0 0 1rem; }
 .history-item h3 { grid-column: 2; margin: 0 0 .2rem; font-size: 1rem; }
 .history-item p { grid-column: 2; margin: 0; color: var(--muted); font-size: .87rem; line-height: 1.52; }
 .history-item .education-details { margin-top: .45rem; }
-.home-news-item p { color: var(--ink); }
+.home-news-item { grid-template-columns: 5.5rem minmax(0, 1fr); column-gap: .75rem; padding: .6rem 0 .65rem; }
+.home-news-item:first-child { padding-top: 0; }
+.home-news-item p { color: var(--ink); line-height: 1.42; }
 .position-groups { margin: 0; padding-left: 1.35rem; list-style: disc; }
 .position-group { padding: .95rem 0 1rem; border-bottom: 1px solid var(--line); }
 .position-group:first-child { padding-top: 0; }
@@ -300,9 +302,13 @@ p { margin: 0 0 1rem; }
 }
 
 .interest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.interest-columns { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 1.2rem; }
+.interest-foundations { display: grid; gap: 1.2rem; }
 .interest-item { padding-top: .9rem; border-top: 2px solid var(--blue); }
 .interest-item h3 { margin-top: 0; }
 .interest-item p { margin-bottom: 0; color: #454c54; font-size: .94rem; }
+.interest-directions { margin: 0; padding-left: 1.2rem; color: #454c54; font-size: .94rem; }
+.interest-directions li { break-inside: avoid; margin-bottom: .35rem; }
 .compact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 3.5rem; }
 
 .plain-list li { padding: .85rem 0; border-top: 1px solid var(--line); }
@@ -339,7 +345,7 @@ p { margin: 0 0 1rem; }
   .profile-grid { grid-template-columns: 1fr; gap: 2rem; }
   .profile-aside { display: grid; grid-template-columns: 7.25rem minmax(0, 1fr); gap: 1.25rem; align-items: start; }
   .portrait-placeholder, .portrait-frame { margin: 0; }
-  .interest-grid, .compact-grid { grid-template-columns: 1fr; }
+  .interest-grid, .interest-columns, .compact-grid { grid-template-columns: 1fr; }
   .home-overview-grid { gap: 2.25rem; }
   .history-item { grid-template-columns: 1fr; }
   .history-dates { grid-column: 1; grid-row: auto; margin-bottom: .2rem; }
