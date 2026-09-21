@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dazhuli-logic.github.io/sitemap.xml
